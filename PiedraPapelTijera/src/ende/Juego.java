@@ -10,15 +10,15 @@ public class Juego
 {
     public static void main(String args[])
     {
-        Jugador p1 = new Jugador();
-        Jugador p2 = new Jugador();
+    	private Jugador p1 = new Jugador();
+    	private Jugador p2 = new Jugador();
         boolean finDeJuego = false;  
-        int rondasJugadas = 0;    // Número de rondas jugadas
-        int exitosJugador1 = p1.éxitos;
-        int exitosJugador2 = p2.éxitos;
-        int empates = 0;
-        String opcionJugador1;
-        String opcionJugador2;
+        private int rondasJugadas = 0;    // Número de rondas jugadas
+        private int exitosJugador1 = p1.éxitos;
+        private int exitosJugador2 = p2.éxitos;
+        private int empates = 0;
+        private String opcionJugador1;
+        private String opcionJugador2;
         
         // Bucle de juego
         do {
@@ -75,8 +75,8 @@ class Jugador{
      * Escoge piedra, papel o tijera al azar
      */
 	
-	int éxitos;      // número de partidas ganadas
-    int winTotal;	// total partidas ganadas
+	private int éxitos;      // número de partidas ganadas
+	private int winTotal;	// total partidas ganadas
 	
     public void setÉxitos() {
         éxitos++;
