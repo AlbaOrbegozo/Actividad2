@@ -1,7 +1,8 @@
 package ende;
 
 /**
- * Simula el juego de Piedra, Papel o tijera
+ * @Author - Alba Orbegozo Martínez
+ * Programa que simula el juego de Piedra, Papel o tijera
  */
 
 
@@ -75,7 +76,7 @@ public class Juego
     }
 }
 /**
- *
+ * Clase jugador
  */
 class Jugador{
    
@@ -108,5 +109,5 @@ class Jugador{
     }
     
     int éxitos;      // número de partidas ganadas
-    int winTotal;
+    int winTotal;	// total partidas ganadas
 }
