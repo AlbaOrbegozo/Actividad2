@@ -10,18 +10,18 @@ public class Juego
 {
     public static void main(String args[])
     {
-        Jugador p1=new Jugador();
-        Jugador p2=new Jugador();
-        boolean fin_de_juego=false;  
+        Jugador p1 = new Jugador();
+        Jugador p2 = new Jugador();
+        boolean fin_de_juego = false;  
         Integer Rondasjugadas = 0;    // Número de rondas jugadas
-        Integer EXITOS_jugador1=p1.éxitos;
-        Integer EXITOS_jugador2=p2.éxitos;
+        Integer EXITOS_jugador1 = p1.éxitos;
+        Integer EXITOS_jugador2 = p2.éxitos;
         Integer EmPaTeS = 0;
-        String opcion_JUGADOR1, opcion_JUGADOR2;
+        String opcion_JUGADOR1;
+        String opcion_JUGADOR2;
         
         // Bucle de juego
-        do
-        {
+        do {
             System.out.println("***** Ronda: " + Rondasjugadas+" *********************\n");
             System.out.println("Numero de empates: "+ EmPaTeS + "\n");
             opcion_JUGADOR1=p1.opcion_al_azar();
@@ -53,17 +53,17 @@ public class Juego
             	EXITOS_jugador2 = ++p2.éxitos;
                 System.out.println("Jugador 2 GANA");
             }
-            if(opcion_JUGADOR1==opcion_JUGADOR2) {
+            if(opcion_JUGADOR1 == opcion_JUGADOR2) {
             	EmPaTeS++;
                 System.out.println("\n\t\t\t Empate \n");
             }
             Rondasjugadas++;
             if((p1.éxitos>=3)||(p2.éxitos>=3)) {
-            	fin_de_juego=true;
+            	fin_de_juego = true;
                 System.out.println("FIN DEL JUEGO!!");
             }
             System.out.println();
-        } while(fin_de_juego!=true);
+        } while(fin_de_juego != true);
     }
 }
 /**
@@ -78,6 +78,14 @@ class Jugador{
 	int éxitos;      // número de partidas ganadas
     int winTotal;	// total partidas ganadas
 	
+    public void setÉxitos() {
+        éxitos++;
+    }
+    
+    public int getÉxitos() {
+        return(éxitos);
+    }
+    
     public String opcion_al_azar()
     {
         String opcion="";
@@ -93,15 +101,6 @@ class Jugador{
             	opcion=("tijeras");
         }
         return opcion;
-    }
-    
-    public void setÉxitos() {
-        éxitos++;
-    }
-    
-    public int getÉxitos() {
-        return(éxitos);
-    }
-    
+    }  
     
 }
