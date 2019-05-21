@@ -99,6 +99,7 @@ class Jugador{
                 break;
             case 2:
             	opcion = ("tijeras");
+            	break;
         }
         return opcion;
     }  
