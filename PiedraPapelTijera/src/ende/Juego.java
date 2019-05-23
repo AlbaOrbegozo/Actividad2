@@ -5,7 +5,6 @@ package ende;
  * Programa que simula el juego de Piedra, Papel o tijera
  */
 
-
 public class Juego 
 {
     public static void main(String args[])
